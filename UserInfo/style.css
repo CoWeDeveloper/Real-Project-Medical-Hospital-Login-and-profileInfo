@@ -1,0 +1,16 @@
+
+
+.bg-header{
+    background-color: grey;
+    width: 100px;
+}
+
+.profilePic{
+    width: 5rem; 
+    height: 5rem; 
+
+    box-shadow: inset 0 2xp 4px 0 hsla(0, 0%, 0%, 2);
+}
+.hello{
+    color: yellow;
+}
