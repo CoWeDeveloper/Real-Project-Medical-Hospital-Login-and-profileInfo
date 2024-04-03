@@ -1,7 +1,14 @@
+*{
+  margin: 0px;
+  padding: 0px;
+}
+
 body{
     background-color: #2c2c2c;
-    margin: 0;
-    padding: 0;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
 }
 
 .bg-img{
@@ -16,7 +23,32 @@ body{
     top: 50%;
     z-index: 1;
 }
+.content {
+  flex: 1; 
+}
+.login-container {
+  margin-top: 200px;
+  
+}
 
-.login-conatiner{
-  z-index: 1;
+.bg-card{
+  /* background-color: #FF0202; */
+  background: linear-gradient(#FF0202, transparent) ;
+  border: none;  
+}
+
+.trans{
+  opacity: 100% !important;
+}
+
+.text-sm{
+    font-size: 0.775rem; 
+line-height: 1.25rem;
+}
+
+footer{
+  background-color: red;
+  z-index: 0;
+  margin-top: auto;
+
 }
