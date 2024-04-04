@@ -12,7 +12,7 @@ body{
 }
 
 .bg-img{
-    background-image: url("../Assets/Images/ellipse1.svg");
+    background-image: url("../Assets/Images/bg-semiCircle.svg");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: bottom center;
@@ -20,25 +20,99 @@ body{
     bottom: 0%;
     left: 0%;
     right: 0%;
-    top: 50%;
-    z-index: 1;
+    top: 52%;
+    z-index: -1;
 }
-.content {
-  flex: 1; 
+
+
+.bg-ball1{
+  background-image: url("../Assets/Images/ball1.svg");
+  background-size: 18vw;   
+  background-repeat: no-repeat;
+  background-position-x:right;
+  position: absolute;
+  bottom: 0%;
+  left: 0%;
+  right: 5%;
+  top: 0%;
+  z-index: 2;
 }
-.login-container {
-  margin-top: 200px;
+
+.balloonEffect1{
   
+  transition:transform 0.9s ease;
+  animation:balloons1 20s ease-in-out infinite;
+  transform-origin:bottom center;
+}
+
+.balloonEffect1:nth-child(2){ animation-duration:25s;   transform-origin:bottom ; }
+
+@keyframes balloons1 {
+  0%,100%{ transform:translate(0px)  rotate(-8deg); transform:scale(80%) }
+  50%{ transform:translateY(-15px)  rotate(6deg);
+ }
+}
+
+.bg-ball2{
+  background-image: url("../Assets/Images/ball2.svg");
+  background-size: 12vw;   
+  background-repeat: no-repeat;
+  background-position: left center;
+  position: absolute;
+  bottom: 20%;
+  left: 10%;
+  right: 0%;
+  top: 0%;
+  z-index: 2;
+}
+
+.heart-line{
+  background-image: url("../Assets/Images/heartLine.png");
+  background-size: contain;   
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  bottom: 0%;
+  left: 0%;
+  right: 0%;
+  top: 31%;
+  z-index: 4;
+}
+
+.login-container {
+  margin-top: 250px;
+}
+
+.login-btn{
+  color: white;
+  border:none;
+  background: linear-gradient(to left, transparent, #f81e1e, #f81e1e);
+  /* background: linear-gradient(to left, #FF2323, #FF8D8D, #FF8D8D); */
+  transition: transform 0.6s ease;
+  transform: translateY(0px);
+  z-index: 4;
+}
+
+.login-btn:hover{
+  color: white;
+  border: white 1px solid;
+  background: linear-gradient(to right, #FF2323,  #FF8D8D);
+  transition: transform 0.9s ease;
+  transform: translateY(-5px);
+
 }
 
 .bg-card{
-  /* background-color: #FF0202; */
-  background: linear-gradient(#FF0202, transparent) ;
-  border: none;  
+  /* background-color: #FF0202; #ff02023b */
+  background: linear-gradient(#57040444, transparent, #ff020279, #f88181) ;
+  border: none; 
+  
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
 }
 
-.trans{
-  opacity: 100% !important;
+.form-container{
+  position: relative;
+  z-index: 10;
 }
 
 .text-sm{
@@ -48,7 +122,87 @@ line-height: 1.25rem;
 
 footer{
   background-color: red;
-  z-index: 0;
   margin-top: auto;
+  z-index:2;
+}
+
+/* @media (max-width: 767px) {
+ 
+} */
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+  /* Adjustments for small devices */
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .login-container {
+    margin-top: 100px; /* Adjusted margin for smaller screens */
+  }
+  .bg-img{
+    background-image: url("../Assets/Images/moblie-semiCircle.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    position: absolute;
+    bottom: 0%;
+    left: 0%;
+    right: 0%;
+    top: 60%;
+  }
+  .text-sm {
+    font-size: 0.675rem; /* Adjusted font size for smaller screens */
+    line-height: 1rem; /* Adjusted line height for smaller screens */
+}
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  /* Adjustments for large devices */
+  .heart-line{
+    background-image: url("../Assets/Images/heartLine.png");
+    background-size: contain;   
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    bottom: 0%;
+    left: 0%;
+    right: 0%;
+    top: 40%;
+    z-index: 4;
+  }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  /* Adjustments for extra large devices */
+  .login-container{
+    margin-top: 250px;
+  }
+  .bg-img{
+    background-image: url("../Assets/Images/bg-semiCircle.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    position: absolute;
+    bottom: 0%;
+    left: 0%;
+    right: 0%;
+    top: 52%;
+    z-index: -1;
+}
+.heart-line{
+  background-image: url("../Assets/Images/heartLine.png");
+  background-size: contain;   
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  bottom: 0%;
+  left: 0%;
+  right: 0%;
+  top: 30%;
+  z-index: 4;
+}
 
 }
