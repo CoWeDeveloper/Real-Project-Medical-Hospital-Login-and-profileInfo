@@ -8,14 +8,16 @@ body {
 .profilePic{
     width: 3rem; 
     height: 3rem; 
-    box-shadow: inset 0 2xp 4px 0 hsla(0, 0%, 0%, 2);
+    box-shadow: inset 0 2xp 4px 0 hsla(0, 0%, 0%, .2);
+    border: 2px solid hsl(212, 12%, 72%);
     transition: all 0.3s ease;
 }
 .profilePic:hover{
     transition: all 0.6s ease-in-out;
-    width: 10rem;
-    height: 10rem;
-    box-shadow: 0 0 20px 2px #ff6868;
+    width: 5rem;
+    height: 5rem;
+    box-shadow: 0 0 20px 2px #d19999;
+    border: none;
     /* transform: scale(30px); */
 }
 
@@ -114,8 +116,8 @@ tbody{
 
 /* Change the background color of the dropdown button when the dropdown content is shown */
 .dropdown:hover .dropbtn {
-    background-color: #c9bfbf ;
-    color: #ffc2c2;
+    background-color: #dba7a7 ;
+    color: #797979;
 }
 
 .imghover{
@@ -131,7 +133,7 @@ tbody{
 
 
 /* hsl(0, 0%, 78%) */
-@media (max-width: 600px) {
+@media (max-width: 769px) {
     .table-responsive-sm {
       display: block;
       width: 100%;
@@ -149,6 +151,79 @@ tbody{
     .table>tbody>tr>td>a>img{
         width: 2vw;
     }
+
+    /* .me-md-5{
+        background-color: #e1e4e7;
+        border-radius: 10%;
+        margin: 5px;
+        width: 40vw;
+        padding-top: 5%; */
+        /* display: grid;
+        direction: column;
+        place-content: center; */
+
+        /* display: flex;
+        justify-content: center;
+        text-align: center;
+        
+    } */
+    .font-size-lg {
+        font-size: 2.5  rem !important; /* Adjust the font size as needed */
+        color: #685F5F;  
+    }
+    .bg-user{
+        background-color: #ffff;
+        border-radius: 1rem;
+        padding-top: 2rem;
+        box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.25);
+    }
+    .responsi-content{
+        /* background-color: #c4c4c4; */
+        display: flex;  
+        /* justify-content:center  ;
+        align-items: start; 
+         */
+        width: 100%; /* Set the width of your container */
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 20%;
+        /* position: relative; */
+        /* margin-left:  140px;; */
+        /* align-items: center; */
+    }
+    .responsi-content-inner-box{
+        /* background-color: #FFFFFF; */
+        
+        display: flex;
+        width: 100%;
+        margin: auto;
+        padding-left: 10%;
+        padding-right: 10%;   
+        /* white-space: nowrap; */
+        
+    }
+
+    .profilePic:hover{
+        width: auto;
+        transition: none;
+        height: auto;
+        box-shadow: none;
+        display: inline-block;
+    }
+
+    .profilePic{
+        width: 8rem;
+        height: 8rem;
+    }
+    .profileFontStyle{
+        text-align: center;
+    }
+  
+    /* .profileFontStyle{
+        flex-direction: column;
+    } */
+
+    
 }
     @media (max-width: 400px) {
         .table-responsive-sm {
@@ -168,4 +243,6 @@ tbody{
         .table>tbody>tr>td>a>img{
             width: 3vw;
         }
+
+
   }

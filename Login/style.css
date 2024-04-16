@@ -11,6 +11,10 @@ body{
     flex-direction: column;
 }
 
+.content-container{
+   height: 100vh;
+}
+
 .bg-img{
     background-image: url("../Assets/Images/bg-semiCircle.svg");
     background-size: contain;
@@ -70,12 +74,12 @@ body{
   background-image: url("../Assets/Images/heartLine.png");
   background-size: contain;   
   background-repeat: no-repeat;
-  background-position: center;
-  position: absolute;
-  bottom: 0%;
+  background-position:center;
+  position: relative;
+  bottom: 10%;
   left: 0%;
   right: 0%;
-  top: 31%;
+  top: 0%;
   z-index: 4;
 }
 
