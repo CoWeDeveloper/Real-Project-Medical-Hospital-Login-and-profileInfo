@@ -135,6 +135,7 @@ tbody{
 /* hsl(0, 0%, 78%) */
 @media (max-width: 769px) {
     .navbar{
+        /* background-color: #ff6868 !important; */
         background-color: #FF8D8D !important;
     }
     
@@ -151,6 +152,7 @@ tbody{
       -ms-overflow-style: -ms-autohiding-scrollbar;
       font-size: x-small;
     }
+
     .table-responsive-sm table {
       width: 100% ;
     }
@@ -161,46 +163,65 @@ tbody{
         width: 2vw;
     }
 
-    .font-name{
+    .profile-name{
         font-size: 2.5rem !important; /* Adjust the font size as needed */
         color: #685F5F; 
         font-weight: bolder !important;
-        margin: 0%; 
+        margin: -1%;
+        text-shadow: 1px 2px 5px #858383 !important; 
     }
 
-    .bg-user{
+    .user-container{
         background-color: #ffff;
         border-radius: 1rem;
         padding-top: 2rem;
+        padding-bottom: 1rem;
         box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.25);
+        /* margin-left: 10% ;
+        margin-right: 10% ; */
     }
 
-    .responsi-content{
-  
+    .user-detail{
         display: flex;  
         width: 100%; /* Set the width of your container */
         margin-left: auto;
         margin-right: auto;
         border-radius: 20%;
+        justify-content: center;
+        align-content: start;
+        margin-bottom: 0%;
+        padding: 0.3%;
        
     }
 
-    .responsi-content-inner-box{
-      
+    .user-detail-inner-box{
         display: flex;
         width: 100%;
         margin: auto;
         padding-left: 10%;
         padding-right: 10%;   
+        justify-content: start;
+
+    }
     
-        
+    .user-detail-inner-box > h6{
+        width: 50%;
+        text-align: start;
+        margin: auto;
+    }
+
+    .user-detail-inner-box > p{
+        width: 50%;
+        text-align: start;
+        margin: auto;
     }
 
     .profilePic{
         width: 10rem;
         height: 10rem;
+        box-shadow: 0px 4px 50px rgba(246, 161, 161, 0.4);
     }
- 
+
 
     .profileFontStyle{
         text-align: center;
@@ -220,8 +241,13 @@ tbody{
     .font-MRN-num{
         font-weight: lighter;  
     }
+    .user-detail-inner-box > h6 > img{
+        width: 1.0rem;
+    }
+
+   
 }
-    @media (max-width: 500px) {
+    @media (max-width: 575px) {
         .table-responsive-sm {
           display: block;
           width: 100%;
@@ -238,6 +264,22 @@ tbody{
         }
         .table>tbody>tr>td>a>img{
             width: 3vw;
+        }
+
+        .mt-sm-4{  
+            margin-top: 5%;
+        }
+
+        .mx-sm-5{
+            margin-inline: 4%;
+        }
+
+        .user-detail-inner-box > h6, .user-detail-inner-box >  p {
+            font-size: 0.875rem !important;
+        }
+
+        .user-detail-inner-box > h6 > img{
+            width: 0.9rem;
         }
 
 
