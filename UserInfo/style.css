@@ -171,7 +171,7 @@ tbody {
   }
 
   .table > tbody > tr > td > a > img {
-    width: 2vw;
+    width: 2.4vw;
   }
 
   .profile-name {
@@ -251,7 +251,7 @@ tbody {
     width: 1rem;
   }
 }
-@media (max-width: 575px) {
+@media (max-width: 490px) {
   .table-responsive-sm {
     display: block;
     width: 100%;
@@ -274,7 +274,7 @@ tbody {
   }
 
   .table > tbody > tr > td > a > img {
-    width: 2vw;
+    width: 3vw !important;
   }
 
   .mt-sm-4 {
@@ -293,4 +293,5 @@ tbody {
   .user-detail-inner-box > h6 > img {
     width: 0.9rem;
   }
+
 }
