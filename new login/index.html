@@ -19,13 +19,15 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="bg-ball1 balloonEffect1"></div>
-    <div class="bg-ball2 balloonEffect1"></div>
-    <div class="content-container">
-    <div class="container login-container">
+  <div id="loader">
+  </div>
+    <div class="h-100 d-flex justify-content-center align-items-end">
+      <div class="bg-ball1 balloonEffect1"></div>
+      <div class="bg-ball2 balloonEffect1"></div>
+      <div class="container login-container">
       <div class="row justify-content-center ">
         <div class="col-md-6 ">
-          <div class="card bg-card  rounded-5 py-5 px-5">
+          <div class="card relative bg-card  rounded-5 py-5 px-5">
             <div class="card-body py-5 px-4">
               <div class="col text-center">
                 <img
@@ -34,7 +36,7 @@
                   alt="Report"
                 />
               </div>
-              <h2 class="card-title text-center text-white fs-2 py-3">
+              <h2 class="fw-bolder card-title text-center text-white fs-2 py-3">
                 Reports
               </h2>
               <form class="form-container">
@@ -63,13 +65,14 @@
               </form>
             </div>
             
+            <!-- <img src="../Assets/Images/heartLine.png" alt=""> -->
           </div>
         </div>
-        <div class="heart-line">  </div>
+        <div class="heart-line relative ">  </div>
       </div>
 
       <div class="text-white text-center mt-3">
-        <div class="fw-medium">
+        <div class="fw-medium text-shadow-medium">
           In case there is an issue, please contact us
           <div class="text-sm block text-white fst-italic">
             <img
@@ -77,7 +80,7 @@
               width="24vw"
               alt="whatsApp"
             />
-            whatsApp: 0318-6624636 (NMC-Info)
+            WhatsApp: <span class="fw-bolder text-wide"> 0318-6624636 </span> (NMC-Info)
           </div>
         </div>
       </div>
@@ -91,5 +94,6 @@
         All Rights Reserved || Medical Nation Hospital
       </div>
     </footer>
+      <script src="script.js"></script>
   </body>
 </html>
