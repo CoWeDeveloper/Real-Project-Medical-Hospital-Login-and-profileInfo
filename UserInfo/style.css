@@ -39,7 +39,6 @@ body {
 .table-striped > thead > tr > th {
   background-color: #ffc2c2;
   color: #838484;
-  /* padding-block: 10px ; */
   height: 8vh;
 }
 
@@ -48,8 +47,7 @@ tbody {
 }
 
 .table > tbody > tr > td {
-  /* padding-block: 15px; */
-  height:6vh;
+  height: 6vh;
 }
 
 .page-link {
@@ -113,14 +111,10 @@ tbody {
   color: #797979;
 }
 
-/* .icon{
-    padding: 10%; 
-  } */
-.user-detail-inner-box > h6 > img{
+.user-detail-inner-box > h6 > img {
   width: 1rem;
   height: 1rem;
 }
-
 
 .imghover {
   transition: transform 0.3s ease;
@@ -162,12 +156,11 @@ tbody {
   .table-striped > thead > tr > th {
     font-size: 15px;
     padding-block: 15px;
-    
   }
 
   .table > tbody > tr > td {
     font-size: small;
-    height: 6vh ;
+    height: 6vh;
   }
 
   .table > tbody > tr > td > a > img {
@@ -222,7 +215,6 @@ tbody {
     margin: auto;
   }
 
- 
   .profilePic {
     width: 10rem;
     height: 10rem;
@@ -265,12 +257,12 @@ tbody {
     width: 100%;
   }
   .table-striped > thead > tr > th {
-    font-size:  small;
+    font-size: small;
   }
 
   .table > tbody > tr > td {
     font-size: xx-small;
-    height: 6vh ;
+    height: 6vh;
   }
 
   .table > tbody > tr > td > a > img {
@@ -293,5 +285,4 @@ tbody {
   .user-detail-inner-box > h6 > img {
     width: 0.9rem;
   }
-
 }

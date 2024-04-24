@@ -1,17 +1,17 @@
-*{
+* {
   margin: 0px;
   padding: 0px;
 }
 
-body{
-    background-color: #2c2c2c;
-    height: 100vh;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
+body {
+  background-color: #2c2c2c;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
 
-#loader{
+#loader {
   background: #c5c2c254 url(../Assets/Gif/loader.gif) center no-repeat;
   background-size: 8.9%;
   backdrop-filter: blur(5px);
@@ -21,32 +21,30 @@ body{
   z-index: 100;
 }
 
-.content-container{
-   height: 100vh;
+.content-container {
+  height: 100vh;
 }
 
-.bg-img{
-    background-image: url("../Assets/Images/bg-semiCircle.svg");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: bottom center;
-    position: absolute;
-    /* background-size: hv; */
-    /* height: 100hv; */
-    bottom: 0%;
-    left: 0%;
-    right: 0%;
-    top: 50%;
-    z-index: -1;
-}
-
-
-.bg-ball1{
-  background-image: url("../Assets/Images/ball1.svg");
-  background-size: 18vw;   
+.bg-img {
+  background-image: url("../Assets/Images/bg-semiCircle.svg");
+  background-size: cover;
   background-repeat: no-repeat;
-  background-position-x:right;
-  position: absolute;
+  background-position: bottom center;
+  position: fixed;
+  background-size: 90vw;
+  bottom: 0%;
+  left: 0%;
+  right: 0%;
+  top: 0%;
+  z-index: -1;
+}
+
+.mircoScope-ball {
+  background-image: url("../Assets/Images/ball1.svg");
+  background-size: 18vw;
+  background-repeat: no-repeat;
+  background-position-x: right;
+  position: fixed;
   bottom: 0%;
   left: 0%;
   right: 5%;
@@ -54,27 +52,33 @@ body{
   z-index: -1;
 }
 
-.balloonEffect1{
-  
-  transition:transform 0.9s ease;
-  animation:balloons1 20s ease-in-out infinite;
-  transform-origin:bottom center;
+.balloonEffect1 {
+  transition: transform 0.9s ease;
+  animation: balloons1 35s ease-in-out infinite;
+  transform-origin: bottom center;
 }
 
-.balloonEffect1:nth-child(2){ animation-duration:25s;   transform-origin:bottom ; }
+.balloonEffect1:nth-child(2) {
+  animation-duration: 35s;
+  transform-origin: bottom;
+}
 
 @keyframes balloons1 {
-  0%,100%{ transform:translate(0px)  rotate(-8deg) scale(80%);}
-  50%{ transform:translateY(-15px)  rotate(6deg);
- }
+  0%,
+  100% {
+    transform: translate(0px) rotate(-8deg) scale(80%);
+  }
+  50% {
+    transform: translateY(-1px) rotate(6deg);
+  }
 }
 
-.bg-ball2{
-  background-image: url("../Assets/Images/ball2.svg");
-  background-size: 12vw;   
+.doctorScope-ball {
+  background-image: url("../Assets/Images/bg-semiCircle-large.svg");
+  background-size: 12vw;
   background-repeat: no-repeat;
   background-position: left center;
-  position: absolute;
+  position: fixed;
   bottom: 20%;
   left: 10%;
   right: 0%;
@@ -82,15 +86,13 @@ body{
   z-index: -1;
 }
 
-
-
-.heart-line{
+.heart-line {
   background-image: url("../Assets/Images/heartLine.png");
-  background-size: contain;   
+  background-size: contain;
   background-repeat: no-repeat;
-  background-position:center;
+  background-position: center;
   position: fixed;
- 
+
   height: 100hv;
   object-fit: cover;
   bottom: 0%;
@@ -98,129 +100,259 @@ body{
   right: 0%;
   top: 20%;
   z-index: 4;
-  
 }
 
 .login-container {
-  /* position: relative; */
   width: 100%;
   height: auto;
-  min-height: 80vh; /* Ensures the container fills the viewport */
-  padding-bottom: 10vh; 
+  min-height: 80vh; 
+  padding-bottom: 10vh;
 }
 
-
-
-.login-btn{
+.login-btn {
   color: white;
-  border:none;
+  border: none;
   background: linear-gradient(to left, transparent, #f81e1e, #f81e1e);
-  /* background: linear-gradient(to left, #FF2323, #FF8D8D, #FF8D8D); */
   transition: transform 0.6s ease;
   transform: translateY(0px);
   z-index: 4;
 }
 
-.login-btn:hover{
+.login-btn:hover {
   color: white;
   border: white 1px solid;
-  background: linear-gradient(to right, #FF2323,  #FF8D8D);
+  background: linear-gradient(to right, #ff2323, #ff8d8d);
   transition: transform 0.9s ease;
   transform: translateY(-5px);
-
 }
 
-.bg-card{
-  /* background-color: #FF0202; #ff02023b */
-  background: linear-gradient(#57040444, transparent, #ff020279, #f88181) ;
-  border: none; 
-  
+.bg-card {
+  background: linear-gradient(#57040444, transparent, #ff020279, #f88181);
+  border: none;
+
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
 }
 
-.form-container{
+.form-container {
   position: relative;
   z-index: 10;
 }
 
-.form-contorl{
-   outline: #ff6868 !important;
-   border: #ff6868 !important;
+.form-contorl {
+  outline: #ff6868 !important;
+  border: #ff6868 !important;
 }
 
-.text-shadow-medium{
+.text-shadow-medium {
   text-shadow: 1px 2px 5px #858383 !important;
 }
 
-.text-sm{
-    font-size: 0.775rem; 
-line-height: 1.25rem;
+.text-sm {
+  font-size: 0.775rem;
+  line-height: 1.25rem;
 }
 
-.text-wide{
+.text-wide {
   letter-spacing: 0.03cm;
 }
 
-footer{
+footer {
   background-color: red;
   margin-top: auto;
-  z-index:2;
-  /* width: 100%; */
-    /* height: 100px; */
+  z-index: 2;
   position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
 }
 
+/*======= Media Query Start =======  */
 
- 
-@media (max-width: 769px) {
-  .navbar {
-    background-color: #ff8d8d !important;
+@media (min-width: 320px) {
+  .bg-img {
+    background-image: url("../Assets/Images/moblie-semiCircle.svg");
   }
 
+  .heart-line {
+    background-position: contain;
+    top: 28vh;
+  }
 
+  .mircoScope-ball {
+    background-image: url("../Assets/Images/ball1.svg");
+    background-size: 40vw;
+    position: fixed;
+    bottom: 0%;
+    left: 0%;
+    right: 5%;
+    top: 0%;
+  }
+
+  .doctorScope-ball {
+    background-image: url("../Assets/Images/ball2.svg");
+    background-size: 60vw;
+    position: fixed;
+    bottom: 50%;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+  }
+
+  .balloonEffect1 {
+    animation: none;
+  }
 }
-@media (max-width: 490px) {
-  
 
+@media (min-width: 577px) {
+  .mircoScope-ball {
+    background-image: url("../Assets/Images/ball1.svg");
+    background-size: 30vw;
+    position: fixed;
+    bottom: 0%;
+    left: 0%;
+    right: 5%;
+    top: 10%;
+    z-index: -1;
+  }
+
+  .doctorScope-ball {
+    background-image: url("../Assets/Images/ball2.svg");
+    background-size: 40vw;
+    position: fixed;
+    bottom: 40%;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+  }
+
+  .heart-line {
+    background-position: contain;
+    top: 40vh;
+  }
 }
 
-@media (min-width: 1000px) {
- 
-  .bg-img{
-    top: 60hv;
+@media (min-width: 700px) {
+  .bg-img {
+    background-image: url("../Assets/Images/bg-semiCircle.svg");
+  }
+
+  .balloonEffect1 {
+    animation: balloons1 25s ease-in-out infinite;
+  }
+
+  .balloonEffect1 {
+    transition: transform 0.9s ease;
+    animation: balloons1 30s ease-in-out infinite;
+    transform-origin: center;
+  }
+
+  .mircoScope-ball {
+    background-image: url("../Assets/Images/ball1.svg");
+    background-size: 12vw;
+    position: fixed;
+    bottom: 0%;
+    left: 0%;
+    right: 5%;
+    top: 20%;
+  }
+
+  .doctorScope-ball {
+    background-image: url("../Assets/Images/ball2.svg");
+    background-size: 15vw;
+    background-position: left center;
+    position: fixed;
+    bottom: 30%;
+    left: 15%;
+    right: 0%;
+    top: 20%;
+  }
+
+  .bg-img {
+    top: 100hv;
     background-size: 100hv;
+    margin-bottom: 100hv;
   }
 
-.heart-line{
-  top: 30%;
-  z-index: 4;
+  .heart-line {
+    top: 35vh;
+  }
 }
-
-}
-
 
 @media (min-width: 1400px) {
-  
+  .mircoScope-ball {
+    background-image: url("../Assets/Images/ball1.svg");
+    background-size: 14vw;
+    left: 0%;
+    right: 10%;
+    top: 0%;
+  }
 
-.heart-line{
-  top: 30%;
-  z-index: 4;
+  .doctorScope-ball {
+    background-image: url("../Assets/Images/ball2.svg");
+    background-size: 18vw;
+    bottom: 20%;
+    left: 10%;
+    right: 0%;
+    top: 0%;
+    z-index: 0;
+  }
+
+  .bg-img {
+    top: 90hv;
+    background-size: 200hv;
+    margin-bottom: 50hv;
+  }
+
+  .heart-line {
+    top: 30vh;
+  }
 }
-
-}
-
 
 @media (min-width: 1600px) {
-
-  .bg-img{
+  /* .bg-img{
   top: 48hv;
-}
-/* .heart-line{
-  top: 20%;
-  z-index: 4;
+  background-size: 200hv;
+  background-image-size
 } */
 
+  .mircoScope-ball {
+    background-image: url("../Assets/Images/ball1.svg");
+    background-size: 10vw;
+    background-repeat: no-repeat;
+    background-position-x: right;
+    position: fixed;
+    bottom: 0%;
+    left: 0%;
+    right: 18%;
+    top: 20%;
+    z-index: -1;
+  }
+
+  .balloonEffect1 {
+    transition: transform 0.9s ease;
+    animation: balloons1 35s ease-in-out infinite;
+    transform-origin: center;
+  }
+
+  .balloonEffect1:nth-child(2) {
+    animation-duration: 30s;
+    transform-origin: bottom;
+  }
+
+  .doctorScope-ball {
+    background-image: url("../Assets/Images/ball2.svg");
+    background-size: 16vw;
+    background-repeat: no-repeat;
+    background-position: left center;
+    position: fixed;
+    bottom: 20%;
+    left: 10%;
+    right: 0%;
+    top: 0%;
+    z-index: 0;
+  }
+
+  .heart-line {
+    top: 20vh;
+  }
 }
