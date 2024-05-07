@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="emailDialog">
+      <div
+        id="EmailModal"
+        tabindex="-1"
+        role="dialog"
+        aria-labelledby="EmailModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button
+                type="button"
+                class="close"
+                data-dismiss="modal"
+                aria-label="Close"
+              >
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body py-4">
+              <h5 class="modal-title text-gray text-sm2" id="EmailModalLabel">
+                Email Address:
+              </h5>
+              <input
+                class="text-sm2"
+                type="email"
+                id="recipientEmail"
+                placeholder="Enter Email"
+                name="recipientEmail"
+                required
+              />
+            </div>
+            <div class="modal-footer d-flex align-items-center">
+              <button
+                id="btnCancel"
+                class="btn btn-secondary btn-sm text-sm fw-light py-2 px-3"
+                data-dismiss="modal"
+              >
+                Cancel
+              </button>
+              <button
+                id="btnSendEmail"
+                class="btn btn-danger btn-sm px-4 py-2 text-sm fw-light"
+                onclick="SendEmail()"
+              >
+                Send Email
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      $(document).ready(function () {
+        // Focus on the input element when the dialog box appears
+        $("#EmailModal").on("shown.bs.modal", function () {
+          $("#recipientEmail").focus();
+        });
+      });
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>

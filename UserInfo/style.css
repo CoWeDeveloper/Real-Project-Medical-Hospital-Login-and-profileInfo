@@ -5,6 +5,59 @@ body {
   padding: 0px;
 }
 
+.modal-dialog {
+  backdrop-filter: blur(5px);
+  height: 100vh;
+  width: 100vw;
+  top: -10%;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  z-index: 100;
+}
+
+.emailDialog .modal-content {
+  border-color: #f1b5b5; /* Change the border color */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Optional: Change the box shadow */
+  border-width: 2px;
+  border-radius: 0.5rem;
+}
+
+.emailDialog .modal-content .modal-header {
+  border-bottom: solid 1.8px #b8a9a9;
+}
+
+.emailDialog .modal-content .modal-footer {
+  border-top: solid 1.9px#b8a9a9;
+}
+
+#recipientEmail {
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  width: 100%;
+  display: flex;
+  margin: auto;
+  border: solid 2px #b8a9a9;
+  letter-spacing: 0.5px;
+  font-size: 0.8rem;
+}
+
+#EmailModalLabel {
+  color: #ff6868;
+  font-weight: 600;
+}
+
+#recipientEmail:focus {
+  border: solid 1px #b8a9a9;
+}
+
+.model-header {
+  border-color: #837f7f;
+}
+
 .profilePic {
   width: 4.8rem;
   height: 4.8rem;
@@ -19,9 +72,19 @@ body {
   font-family: sans-serif;
 }
 
-.btn-danger {
+#btnSendEmail {
   background-color: #ff6868;
   border-color: #ff6868;
+  border-radius: 0.5rem;
+}
+
+#btnCancel {
+  border-radius: 0.5rem;
+}
+
+.text-sm2 {
+  font-size: 1rem;
+  line-height: 1.25rem;
 }
 
 .text-sm {
